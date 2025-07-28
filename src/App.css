@@ -1,0 +1,194 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #141417;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor principal */
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Títulos globales */
+h1, h2, h3 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="search"],
+input[type="number"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #3a3a3a;
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus {
+  border-color: #00cfff;
+  box-shadow: 0 0 6px #00cfff;
+  background-color: #333;
+}
+
+input::placeholder {
+  color: #bbb;
+  font-size: 14px;
+}
+
+/* Botones */
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0056b3, #003f8a);
+  transform: scale(1.03);
+}
+
+/* Contenedor de mapas */
+.map-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 600px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+}
+
+/* Layout de la app con menú */
+.menu-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* Barra lateral */
+.sidebar {
+  width: 260px;
+  background-color: #1a1a1f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  text-align: center;
+  color: #00cfff;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  line-height: 1.3em;
+}
+
+.menu-list {
+  list-style: none;
+}
+
+.menu-item {
+  margin-bottom: 12px;
+}
+
+.menu-button {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #2e2e3e;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.menu-button:hover,
+.menu-button.active {
+  background-color: #00cfff;
+  color: #000;
+  transform: translateX(5px);
+}
+
+.sidebar footer {
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+}
+
+/* Contenido principal */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #141417;
+}
+
+/* Secciones específicas */
+.titulo-mapa {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #00cfff;
+}
+
+.contenedor-boton {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contenedor-rutas {
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.info-rutas {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.costo-peaje input {
+  margin-left: 5px;
+  max-width: 150px;
+}
